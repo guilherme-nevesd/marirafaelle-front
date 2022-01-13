@@ -34,7 +34,7 @@ export default function Ebook() {
   }
 
   async function sendEmail(_token, _email) {
-    let url = 'http://localhost:3003/api/v1/ebooks/enviar_ebook'
+    let url = 'https://young-hamlet-77189.herokuapp.com/api/v1/ebooks/enviar_ebook'
     try {
       await axios.post(url, { token: _token, email: _email });
       router.push('/ebook/sucesso')
